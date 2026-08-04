@@ -75,8 +75,9 @@ The original `archive.zip` is intentionally omitted because it contains only a d
 
 ## Data notes
 
+- **Source:** Kaggle, [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams).
 - The source data includes gender, race/ethnicity, parental education, lunch type, test-preparation status, and math, reading, and writing scores.
-- The supplied files did not include a canonical source URL or redistribution license. Confirm the original dataset's attribution and license before making this repository public.
+- Kaggle currently lists the dataset's license as unknown, so confirm redistribution permission before making this repository public.
 - No student names or direct personal identifiers are included in the dataset.
 
 ## Quality checks
@@ -84,4 +85,3 @@ The original `archive.zip` is intentionally omitted because it contains only a d
 - Confirmed 1,000 source records and eight raw fields.
 - Confirmed all four worksheets, three Excel tables, five dashboard charts, and calculated outcome fields.
 - Scanned worksheet XML for common formula errors (`#REF!`, `#DIV/0!`, `#VALUE!`, `#NAME?`, and `#N/A`); none were found.
-
