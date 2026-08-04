@@ -1,12 +1,14 @@
 # Student Academic Outcomes Dashboard
 
-An Excel dashboard analyzing 1,000 student records to explore how test preparation, lunch type, parental education, and subject-level performance relate to academic outcomes.
+I built this Excel dashboard to practice turning a flat CSV into something easier to explore. The dataset contains 1,000 student records with math, reading, and writing scores, along with information about lunch type, test preparation, and parental education.
+
+The dashboard gives a quick view of overall performance, pass rates, high performers, and students who may need more support.
 
 ![Student Academic Outcomes Dashboard](images/dashboard-preview.png)
 
-## Project highlights
+## Main results
 
-| KPI | Result |
+| Measure | Result |
 |---|---:|
 | Students analyzed | 1,000 |
 | Overall average score | 67.8 |
@@ -14,44 +16,49 @@ An Excel dashboard analyzing 1,000 student records to explore how test preparati
 | At-risk students | 285 |
 | High performers | 198 |
 
-## Key findings
+## What I noticed
 
-- Students who completed test preparation averaged **72.7**, compared with **65.0** for students who did not—a **7.7-point difference**.
-- Students receiving standard lunch averaged **70.8**, compared with **62.2** for students receiving free/reduced lunch.
-- Pass rates were highest for students whose parents held a master's degree (**83.1%**) or bachelor's degree (**82.2%**).
-- Reading had the highest subject average (**69.2**), followed by writing (**68.1**) and math (**66.1**).
-- The performance-band distribution was **28.5% At Risk**, **51.7% Meets Standard**, and **19.8% High**.
+Students who completed the test-preparation course averaged 72.7, compared with 65.0 for students who did not. That was a 7.7-point difference in this dataset.
 
-These results describe associations in this dataset and should not be interpreted as causal effects.
+Students receiving standard lunch averaged 70.8, while students receiving free or reduced lunch averaged 62.2.
 
-## Workbook design
+Pass rates were highest among students whose parents held a master's degree or bachelor's degree. Reading had the highest subject average at 69.2, followed by writing at 68.1 and math at 66.1.
 
-The workbook contains four worksheets:
+Using the performance bands I created, 28.5% of students were classified as At Risk, 51.7% as Meets Standard, and 19.8% as High.
 
-| Worksheet | Purpose |
+These are patterns in this particular dataset. They should not be treated as proof that any one factor caused the score differences.
+
+## How I set up the workbook
+
+The file has four worksheets:
+
+| Worksheet | What it contains |
 |---|---|
-| `StudentsPerformance` | Source data converted to an Excel table, plus calculated helper columns |
-| `Analysis` | PivotTable summaries used by the dashboard |
-| `Dashboard` | KPI cards and five charts presenting the main results |
-| `README` | In-workbook project notes and definitions |
+| `StudentsPerformance` | The source data, converted to an Excel table, with added calculation columns |
+| `Analysis` | PivotTables used to summarize the data |
+| `Dashboard` | KPI cards and five charts |
+| `README` | Notes and field definitions inside the workbook |
 
-### Calculated fields
+I added several helper fields to make the dashboard easier to build:
 
-- **Average Score:** mean of math, reading, and writing scores
-- **Pass Flag:** `1` when Average Score is at least 60; otherwise `0`
-- **Outcome:** `Pass` or `At Risk` based on the 60-point threshold
-- **Performance Band:** `High` (80+), `Meets Standard` (60–79.9), or `At Risk` (below 60)
+- **Average Score:** average of math, reading, and writing
+- **Pass Flag:** `1` when the average score is at least 60
+- **Outcome:** `Pass` or `At Risk`
+- **Performance Band:** `High` for 80+, `Meets Standard` for 60 to 79.9, and `At Risk` below 60
 - **Score Gap:** difference between a student's highest and lowest subject score
 
-## Tools and techniques
+The 60-point pass cutoff and the performance bands are choices I made for this project. They are not official standards from the source dataset.
+
+## What I used
 
 - Microsoft Excel
 - Excel Tables and structured-reference formulas
 - PivotTables and PivotCharts
-- KPI calculations and dashboard layout
-- Data validation and outcome segmentation
+- KPI cards
+- Data validation and calculated fields
+- Dashboard layout and formatting
 
-## Repository contents
+## Repository files
 
 ```text
 .
@@ -65,23 +72,22 @@ The workbook contains four worksheets:
 └── README.md
 ```
 
-The original `archive.zip` is intentionally omitted because it contains only a duplicate copy of `StudentsPerformance.csv`.
+The original `archive.zip` is not included because it only contained another copy of `StudentsPerformance.csv`.
 
-## How to explore the project
+## Opening the dashboard
 
 1. Download `Student_Academic_Outcomes_Dashboard.xlsx`.
-2. Open it in Microsoft Excel for the best PivotTable and chart compatibility.
-3. Start with the `Dashboard` worksheet, then review `Analysis` and `StudentsPerformance` to trace the calculations.
+2. Open it in Microsoft Excel. PivotTables and charts may not behave the same way in other spreadsheet programs.
+3. Start on the `Dashboard` sheet, then use `Analysis` and `StudentsPerformance` to trace where the numbers came from.
 
-## Data notes
+## About the data
 
-- **Source:** Kaggle, [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams).
-- The source data includes gender, race/ethnicity, parental education, lunch type, test-preparation status, and math, reading, and writing scores.
-- Kaggle currently lists the dataset's license as unknown, so confirm redistribution permission before making this repository public.
-- No student names or direct personal identifiers are included in the dataset.
+The source is Kaggle's [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams) dataset.
 
-## Quality checks
+It includes gender, race or ethnicity, parental education, lunch type, test-preparation status, and scores for math, reading, and writing. There are no student names or other direct identifiers in the file.
 
-- Confirmed 1,000 source records and eight raw fields.
-- Confirmed all four worksheets, three Excel tables, five dashboard charts, and calculated outcome fields.
-- Scanned worksheet XML for common formula errors (`#REF!`, `#DIV/0!`, `#VALUE!`, `#NAME?`, and `#N/A`); none were found.
+Kaggle currently lists the license as unknown, so the redistribution terms should be checked before reusing the source file elsewhere.
+
+## Checks I made
+
+I confirmed that the workbook contains all 1,000 records, four worksheets, three Excel tables, and five dashboard charts. I also checked the worksheet files for common formula errors such as `#REF!`, `#DIV/0!`, `#VALUE!`, `#NAME?`, and `#N/A`, and did not find any.
