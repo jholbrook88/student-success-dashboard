@@ -58,27 +58,18 @@ The 60-point pass cutoff and the performance bands are choices I made for this p
 - Data validation and calculated fields
 - Dashboard layout and formatting
 
-## Repository files
+## Repository
 
 ```text
 .
-├── Student_Academic_Outcomes_Dashboard.xlsx
-├── data/
-│   └── StudentsPerformance.csv
 ├── images/
 │   └── dashboard-preview.png
-├── .gitattributes
-├── .gitignore
 └── README.md
 ```
 
-The original `archive.zip` is not included because it only contained another copy of `StudentsPerformance.csv`.
-
-## Opening the dashboard
-
-1. Download `Student_Academic_Outcomes_Dashboard.xlsx`.
-2. Open it in Microsoft Excel. PivotTables and charts may not behave the same way in other spreadsheet programs.
-3. Start on the `Dashboard` sheet, then use `Analysis` and `StudentsPerformance` to trace where the numbers came from.
+The public repository contains a preview and an explanation of the workbook. I
+did not include the source CSV or Excel workbook because the workbook contains
+the source records and Kaggle lists the dataset license as unknown.
 
 ## About the data
 
@@ -86,7 +77,8 @@ The source is Kaggle's [Students Performance in Exams](https://www.kaggle.com/da
 
 It includes gender, race or ethnicity, parental education, lunch type, test-preparation status, and scores for math, reading, and writing. There are no student names or other direct identifiers in the file.
 
-Kaggle currently lists the license as unknown, so the redistribution terms should be checked before reusing the source file elsewhere.
+Kaggle currently lists the license as unknown. That is why the source data and
+workbook are not redistributed in this repository.
 
 ## Checks I made
 
