@@ -73,7 +73,7 @@ the source records and Kaggle lists the dataset license as unknown.
 
 ## About the data
 
-The source is Kaggle's [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams) dataset.
+The source is Kaggle's [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams) dataset. The original ZIP can be [downloaded directly from Kaggle](https://www.kaggle.com/api/v1/datasets/download/spscientist/students-performance-in-exams).
 
 It includes gender, race or ethnicity, parental education, lunch type, test-preparation status, and scores for math, reading, and writing. There are no student names or other direct identifiers in the file.
 
