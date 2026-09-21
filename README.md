@@ -4,7 +4,7 @@ I built this Excel dashboard to practice turning a flat CSV into something easie
 
 The dashboard gives a quick view of overall performance, pass rates, high performers, and students who may need more support.
 
-![Student Academic Outcomes Dashboard](images/dashboard-preview.png)
+![Student Academic Outcomes Dashboard](Pictures/dashboard-preview.png)
 
 ## Main results
 
